@@ -38,37 +38,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(setInfo > 0 && setInfo <= listaServicios.count){
-            servicio = listaServicios[setInfo - 1].servicio;
-            instalacion = listaServicios[setInfo - 1].instalacion;
-            porcentaje = listaServicios[setInfo - 1].descuento;
-            descuento = (servicio + instalacion) * porcentaje;
-            totalServicio = (servicio + instalacion) - descuento;
-        }
-        
         switch indexPath.row{
         case 0:
             let titulo = tvCostos.dequeueReusableCell(withIdentifier: "titulo") as! TituloTableViewCell;
             return titulo;
         case 1:
             let precio = tvCostos.dequeueReusableCell(withIdentifier: "precio") as! PrecioTableViewCell;
-            if(setInfo > 0){
-                precio.precServicio.text = String(servicio);
-                precio.precInstalacion.text = String(instalacion);
-                precio.precDescuento.text = String(descuento);
-            }
+            precio.precServicio.text = String(servicio);
+            precio.precInstalacion.text = String(instalacion);
+            precio.precDescuento.text = String(descuento);
             return precio;
         case 2:
             let total = tvCostos.dequeueReusableCell(withIdentifier: "total") as! TotalTableViewCell;
-            if(setInfo > 0){
-                total.precTotal.text = String(totalServicio);
-            }
-            
+            total.precTotal.text = String(totalServicio);
             return total;
         default:
             return UITableViewCell();
         }
-        
     }
     
     @IBAction func btnCalcular(_ sender: UIButton) {
@@ -76,11 +62,29 @@ class ViewController: UIViewController, UITableViewDataSource {
         if(setInfo > 0 && setInfo <= listaServicios.count){
             lblTitulo.text = "Costos";
             lblTitulo.textColor = UIColor.black;
+            asignarValores(setInfo);
         }else{
             lblTitulo.text = "Ingrese un servicio válido!!!";
             lblTitulo.textColor = UIColor.red;
+            asignarValores(0)
         }
         tvCostos.reloadData();
+    }
+    
+    func asignarValores(_ valor :Int){
+        if(valor != 0){
+            servicio = listaServicios[valor - 1].servicio;
+            instalacion = listaServicios[valor - 1].instalacion;
+            porcentaje = listaServicios[valor - 1].descuento;
+            descuento = (servicio + instalacion) * porcentaje;
+            totalServicio = (servicio + instalacion) - descuento;
+        }else{
+            servicio = 0;
+            instalacion = 0;
+            porcentaje = 0;
+            descuento = 0;
+            totalServicio = 0;
+        }
     }
 }
 
