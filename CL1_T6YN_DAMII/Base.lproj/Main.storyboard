@@ -150,7 +150,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mTO-iO-pYB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titulo" id="mTO-iO-pYB" customClass="TituloTableViewCell" customModule="CL1_T6YN_DAMII" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mTO-iO-pYB" id="zad-ra-Mdr">
@@ -180,8 +180,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="TituloServicio" destination="PIv-I5-rZJ" id="RYG-bB-TVY"/>
+                                            <outlet property="tituloDescuento" destination="kGy-j2-PHT" id="hUB-Cb-owL"/>
+                                            <outlet property="tituloInstalacion" destination="I9o-HW-s2O" id="zwj-2o-kjv"/>
+                                            <outlet property="tituloServicio" destination="PIv-I5-rZJ" id="xqg-62-5vg"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HKf-ls-jQB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="precio" id="HKf-ls-jQB" customClass="PrecioTableViewCell" customModule="CL1_T6YN_DAMII" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93.666667938232422" width="361" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HKf-ls-jQB" id="TEa-gr-BxR">
@@ -211,8 +217,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="precDescuento" destination="FYt-MK-u06" id="lkt-aG-WEj"/>
+                                            <outlet property="precInstalacion" destination="f7F-Kg-8T4" id="UdS-pn-kHf"/>
+                                            <outlet property="precServicio" destination="tnP-D1-UXr" id="RE0-wz-bsh"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="106" id="25T-d9-KpV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="total" rowHeight="106" id="25T-d9-KpV" customClass="TotalTableViewCell" customModule="CL1_T6YN_DAMII" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="137.33333587646484" width="361" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25T-d9-KpV" id="665-7v-Xn6">
@@ -239,6 +250,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgServicio" destination="M1H-nr-433" id="rp3-6G-6cT"/>
+                                            <outlet property="lblTotal" destination="ezi-jp-QG7" id="NOU-cS-ndr"/>
+                                            <outlet property="precTotal" destination="Yzs-cn-Opb" id="EPc-xr-GG0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -246,6 +262,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tvCostos" destination="VgC-nn-3ra" id="lv2-63-RMj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
