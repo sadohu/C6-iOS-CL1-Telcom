@@ -16,6 +16,7 @@
 		41BA2D8B2AC7B091000C29D6 /* PrecioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA2D8A2AC7B091000C29D6 /* PrecioTableViewCell.swift */; };
 		41BA2D8D2AC7B372000C29D6 /* TituloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA2D8C2AC7B372000C29D6 /* TituloTableViewCell.swift */; };
 		41BA2D8F2AC7B560000C29D6 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA2D8E2AC7B560000C29D6 /* TotalTableViewCell.swift */; };
+		41BA2D912AC7CB47000C29D6 /* Servicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA2D902AC7CB46000C29D6 /* Servicio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		41BA2D8A2AC7B091000C29D6 /* PrecioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecioTableViewCell.swift; sourceTree = "<group>"; };
 		41BA2D8C2AC7B372000C29D6 /* TituloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloTableViewCell.swift; sourceTree = "<group>"; };
 		41BA2D8E2AC7B560000C29D6 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		41BA2D902AC7CB46000C29D6 /* Servicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servicio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				41BA2D8A2AC7B091000C29D6 /* PrecioTableViewCell.swift */,
 				41BA2D8C2AC7B372000C29D6 /* TituloTableViewCell.swift */,
 				41BA2D8E2AC7B560000C29D6 /* TotalTableViewCell.swift */,
+				41BA2D902AC7CB46000C29D6 /* Servicio.swift */,
 			);
 			path = CL1_T6YN_DAMII;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				41BA2D8B2AC7B091000C29D6 /* PrecioTableViewCell.swift in Sources */,
 				41BA2D772AC7A0C0000C29D6 /* AppDelegate.swift in Sources */,
 				41BA2D792AC7A0C0000C29D6 /* SceneDelegate.swift in Sources */,
+				41BA2D912AC7CB47000C29D6 /* Servicio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
