@@ -149,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-nn-3ra">
-                                <rect key="frame" x="16" y="574" width="361" height="244"/>
+                                <rect key="frame" x="16" y="574" width="361" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -226,11 +226,11 @@
                                             <outlet property="precServicio" destination="tnP-D1-UXr" id="RE0-wz-bsh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="total" rowHeight="106" id="25T-d9-KpV" customClass="TotalTableViewCell" customModule="CL1_T6YN_DAMII" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="137.33333587646484" width="361" height="106"/>
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="total" rowHeight="40" id="25T-d9-KpV" customClass="TotalTableViewCell" customModule="CL1_T6YN_DAMII" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="137.33333587646484" width="361" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25T-d9-KpV" id="665-7v-Xn6">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="106"/>
+                                        <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25T-d9-KpV" id="665-7v-Xn6">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezi-jp-QG7">
@@ -247,25 +247,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-nr-433">
-                                                    <rect key="frame" x="80" y="37" width="200" height="69"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imgServicio" destination="M1H-nr-433" id="rp3-6G-6cT"/>
                                             <outlet property="lblTotal" destination="ezi-jp-QG7" id="NOU-cS-ndr"/>
                                             <outlet property="precTotal" destination="Yzs-cn-Opb" id="EPc-xr-GG0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-nr-433">
+                                <rect key="frame" x="16" y="711" width="361" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="imgServicio" destination="M1H-nr-433" id="lZh-ey-SeX"/>
                         <outlet property="lblTitulo" destination="Afj-sf-b39" id="Yx3-OV-mjT"/>
                         <outlet property="tvCostos" destination="VgC-nn-3ra" id="lv2-63-RMj"/>
                         <outlet property="txtServicio" destination="iCr-4l-k7R" id="Qhr-gX-zQx"/>

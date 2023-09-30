@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tvCostos: UITableView!
     @IBOutlet weak var txtServicio: UITextField!
     @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var imgServicio: UIImageView!
     var listaServicios : [Servicio] = [];
     var setInfo = 0;
     var servicio : Double = 0.0;
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     var porcentaje : Double = 0.0;
     var descuento : Double = 0.0;
     var totalServicio : Double = 0.0;
+    var imgName : String = "cheems";
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        imgServicio.image = UIImage(named: imgName);
         switch indexPath.row{
         case 0:
             let titulo = tvCostos.dequeueReusableCell(withIdentifier: "titulo") as! TituloTableViewCell;
@@ -78,12 +81,14 @@ class ViewController: UIViewController, UITableViewDataSource {
             porcentaje = listaServicios[valor - 1].descuento;
             descuento = (servicio + instalacion) * porcentaje;
             totalServicio = (servicio + instalacion) - descuento;
+            imgName = listaServicios[valor - 1].image;
         }else{
             servicio = 0;
             instalacion = 0;
             porcentaje = 0;
             descuento = 0;
             totalServicio = 0;
+            imgName = "cheems";
         }
     }
 }

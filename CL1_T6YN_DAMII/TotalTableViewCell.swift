@@ -10,7 +10,6 @@ import UIKit
 class TotalTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTotal: UILabel!
     @IBOutlet weak var precTotal: UILabel!
-    @IBOutlet weak var imgServicio: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
